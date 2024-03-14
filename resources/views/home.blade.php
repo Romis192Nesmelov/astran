@@ -52,7 +52,5 @@
         <p>Есть вопросы или предложения? Свяжитесь с нами!</p>
         <button type="button" data-bs-toggle="modal" data-bs-target="#feedback-modal">Написать</button>
     </x-section>
-    <div class="wow animate__animated animate__fadeIn" data-wow-delay=".5s">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aea72d9c1788bd2522b42967c0c5c1cd445604bf68a7fffd8bdcba5a6c11f426d&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
-    </div>
+    <div id="map" class="wow animate__animated animate__fadeIn" data-wow-delay=".5s"></div>
 @endsection

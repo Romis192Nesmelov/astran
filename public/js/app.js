@@ -3,19 +3,23 @@ $(document).ready(function() {
 
     new WOW().init();
 
+    ymaps.ready(() => {
+        mapInit();
+    });
+
     const mainMenu = $('#main-menu'),
         iconMenu = $('#icon-menu');
 
     window.menuOpenFlag = false;
     window.menuAnimationFlag = false;
 
-    setTimeout(() => {
+    // setTimeout(() => {
         // window.scrollTo(0, 0);
         mainMenu.css('right','-25%');
-        // windowResize();
+        windowResize();
         showHideOnTop();
         // $('#loader').remove();
-    }, 500);
+    // }, 500);
 
     $(window).on('resize', () => {
         windowResize();
@@ -117,4 +121,40 @@ const openCloseMainMenu = (mainMenu, iconMenu) => {
             }
         }
     });
+}
+
+const mapInit = () => {
+    let myMap = new ymaps.Map("map", {
+        center: [55.888765, 37.433526],
+        zoom: 15,
+        controls: []
+    }),
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        // Создаем метку с помощью вспомогательного класса.
+        placemark = new ymaps.Placemark([55.888765, 37.433526], {
+            // Свойства.
+            // Содержимое хинта.
+            hintContent: 'ООО «Астран»'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: '../images/placemark.png',
+            // Размеры метки.
+            iconImageSize: [150, 150],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-70, -130],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [0, 0],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
+
+    myMap.geoObjects.add(placemark);
 }
