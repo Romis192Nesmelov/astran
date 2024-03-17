@@ -4,7 +4,8 @@ body {
     background-color: white;
 }
 
-#feedback-modal .modal-dialog {
+#feedback-modal .modal-dialog,
+#policy-modal .modal-dialog {
     max-width: 1300px;
 }
 
@@ -328,8 +329,20 @@ footer .container a {
     color: white;
 }
 
+a.doc-href {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #2d529b;
+}
+
+.doc-icon {
+    width: 25px;
+    margin-right: 10px;
+}
+
 @media (max-width: 991px)  {
-    #feedback-modal .modal-dialog {
+    #feedback-modal .modal-dialog,
+    #policy-modal .modal-dialog {
         max-width: calc(100% - 10px);
     }
 
