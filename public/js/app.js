@@ -30,6 +30,10 @@ $(document).ready(function() {
         openCloseMainMenu(mainMenu, iconMenu);
     });
 
+    $('.big-image, .section').click(function () {
+        if (window.menuOpenFlag) openCloseMainMenu(mainMenu, iconMenu);
+    });
+
     //Glow dots
     let glowPos = 0,
         dots = $('#line .dot');
