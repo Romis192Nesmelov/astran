@@ -129,7 +129,7 @@ const openCloseMainMenu = (mainMenu, iconMenu) => {
 
 const mapInit = () => {
     let myMap = new ymaps.Map("map", {
-        center: [55.888765, 37.433526],
+        center: [55.779155, 37.600594],
         zoom: 15,
         controls: []
     }),

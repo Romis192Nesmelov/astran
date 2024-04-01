@@ -43,8 +43,8 @@
     </x-section>
     <x-section class="while third wow animate__animated animate__fadeIn" data-wow-delay=".5s" data-scroll-destination="contacts" head="Контакты">
         <p class="w-100 text-center mb-0">
-            127422, г. Московская обл,<br>
-            г. Химки, Ленинградское шоссе, вл 5<br>
+            127030, г.Москва,<br>
+            Новослободская улица, 3<br>
             <strong>ООО «Астран»</strong>
         </p>
     </x-section>
