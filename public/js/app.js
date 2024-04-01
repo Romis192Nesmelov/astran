@@ -139,7 +139,7 @@ const mapInit = () => {
         ),
 
         // Создаем метку с помощью вспомогательного класса.
-        placemark = new ymaps.Placemark([55.888765, 37.433526], {
+        placemark = new ymaps.Placemark([55.779155, 37.600594], {
             // Свойства.
             // Содержимое хинта.
             hintContent: 'ООО «Астран»'
