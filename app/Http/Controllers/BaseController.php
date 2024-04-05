@@ -11,22 +11,24 @@ class BaseController extends Controller
     {
         $this->data['tariffs'] = [
             [
-                'name' => 'Смс',
-                'pack' => 'Basic pack',
-                'text' => '5GB Disk Space<br>15 Email Addresses<br>50 Subdomains<br>Advanced option',
-                'price' => '270'
+                'name' => 'Тариф 1',
+                'text' => '100 минут<br>10 Гб<br>100 смс',
+                'price' => '99,00'
             ],
             [
-                'name' => 'Минуты',
-                'pack' => 'Basic pack',
-                'text' => '5GB Disk Space<br>15 Email Addresses<br>50 Subdomains<br>Advanced option',
-                'price' => '499'
+                'name' => 'Тариф 2',
+                'text' => '250 минут<br>25 Гб<br>250 смс',
+                'price' => '399,00'
             ],
             [
-                'name' => 'Гб',
-                'pack' => 'Basic pack',
-                'text' => '5GB Disk Space<br>15 Email Addresses<br>50 Subdomains<br>Advanced option',
-                'price' => '1000'
+                'name' => 'Тариф 3',
+                'text' => '0 минут<br>40 Гб<br>500 смс',
+                'price' => '450,00'
+            ],
+            [
+                'name' => 'Тариф 4',
+                'text' => '0 минут<br>0 Гб<br>0 смс',
+                'price' => '0'
             ],
         ];
         return $this->showView('home');

@@ -26,11 +26,11 @@
     <x-section class="while second wow animate__animated animate__fadeIn" data-wow-delay=".5s" data-scroll-destination="tariffs" head="Тарифные планы">
         <x-row>
             @foreach($tariffs as $k => $tariff)
-                <div class="col-md-4 col-sm-12 ps-5 pe-5 wow animate__animated animate__fadeIn" data-wow-delay="{{ ($k+1) * 0.7 }}s">
+                <div class="col-md-{{ 12/count($tariffs) }} col-sm-12 wow animate__animated animate__fadeIn" data-wow-delay="{{ ($k+1) * 0.7 }}s">
                     <div class="tariff-head">{{ $tariff['name'] }}</div>
                     <div class="tariff-block">
                         <div class="content">
-                            <span class="pack">{{ $tariff['pack'] }}</span><br>
+{{--                            <span class="pack">{{ $tariff['pack'] }}</span><br>--}}
                             {!! $tariff['text'] !!}
                         </div>
                         <div class="price">{{ $tariff['price'] }}₽</div>

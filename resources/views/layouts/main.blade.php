@@ -51,7 +51,10 @@
 </x-modal>
 
 <x-modal id="legal-information-modal" head="Правовая информация">
-    @include('blocks.document_block',['doc' => '#', 'name' => 'Некий документ'])
+    @include('blocks.document_block',['doc' => 'Договор на оказание услуг ПРТС ООО Астран', 'name' => 'Договор на оказание услуг<br>ПРТС ООО Астран'])
+    @include('blocks.document_block',['doc' => 'Полные правила тарифного плана 0-0-0', 'name' => 'Полные правила<br>тарифного плана 0-0-0'])
+    @include('blocks.document_block',['doc' => 'Полные правила тарифного плана 100-100-10', 'name' => 'Полные правила<br>тарифного плана 100-100-10'])
+    @include('blocks.document_block',['doc' => 'Полные правила тарифного плана 250-250-25', 'name' => 'Полные правила<br>тарифного плана 250-250-25'])
 </x-modal>
 
 <x-modal id="policy-modal" head="Политика обработки персональных данных">

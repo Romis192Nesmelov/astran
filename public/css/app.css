@@ -30,6 +30,10 @@ body {
     right: 20px;
 }
 
+#legal-information-modal .modal-body {
+    padding: 50px !important;
+}
+
 #loader {
     position: fixed;
     width: 100%;
